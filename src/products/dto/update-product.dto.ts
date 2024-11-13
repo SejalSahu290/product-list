@@ -35,12 +35,12 @@
 
 /* eslint-disable prettier/prettier */
 
- import { IsDate, IsNotEmpty, IsNumber,  IsString } from "class-validator";
+ import { IsNumber,  IsString } from "class-validator";
  export class UpdateProductDto{
 
-     @IsNotEmpty()
-     @IsNumber()
-    id: number;
+    //  @IsNotEmpty()
+    //  @IsNumber()
+    // id: number;
     
     @IsString()
     name: string;
@@ -48,9 +48,9 @@
     @IsNumber()
     price: number;
 
-    @IsNumber()
-    @IsDate()
-    date?: Date;
+    // @IsNumber()
+    // @IsDate()
+    // date?: Date;
 
      @IsNumber()
      quantity: number;

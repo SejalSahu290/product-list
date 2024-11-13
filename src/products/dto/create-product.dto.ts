@@ -9,8 +9,8 @@ export class CreateProductDto {
     @IsNotEmpty()
     price:number;
 
-    @IsNotEmpty()
-    date:Date;
+    // @IsNotEmpty()
+    // date:Date;
      
     @IsNotEmpty()
     quantity:number;

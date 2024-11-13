@@ -43,14 +43,14 @@ export class ProductsService {
   async updateProduct(id: number, updateProductDto: UpdateProductDto): Promise<Product>{
 
 
-    const { name , price , date , quantity } = updateProductDto;
+    const { name , price  , quantity } = updateProductDto;
       
     const product = await this.productRepository.findOne({ where: {id} });
 
   
       product.name = name;
       product.price = price;
-      product.date = date;
+      // product.date = date;
       product.quantity = quantity;
        
   
