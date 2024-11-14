@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Exclude } from "class-transformer";
+import { User } from "src/auth/user.entity";
+import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Product{
@@ -19,5 +21,10 @@ export class Product{
 
  @Column()
  quantity:number;
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  @ManyToOne(_type => User, user=> user.products, {eager: false})
+  @Exclude({toPlainOnly: true})
+  user: User;
 
 }
